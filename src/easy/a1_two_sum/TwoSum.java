@@ -11,7 +11,7 @@ import java.util.Map;
  *  return [0, 1].
  */
 
-public class Two_Sum {
+public class TwoSum {
 
     /**
      * solution1 : 双重循环
@@ -76,7 +76,7 @@ public class Two_Sum {
     }
 
     public static void main(String[] args) {
-        Two_Sum two_sum = new Two_Sum();
+        TwoSum two_sum = new TwoSum();
         int[] nums = {55 ,7 ,89 , 9, 6, 22, 45, 1, 11};
         int target = 51;
         int[] result = two_sum.twoSum(nums, target);

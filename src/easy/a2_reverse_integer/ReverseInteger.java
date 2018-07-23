@@ -1,14 +1,12 @@
 package easy.a2_reverse_integer;
 
-import java.util.ArrayList;
-
 /**
  * Reverse digits of an integer.
  * Example1: x = 123, return 321
  * Example2: x = -123, return -321
  * */
 
-public class Reverse_Integer {
+public class ReverseInteger {
 
 
     public int reverse(int x) {
@@ -57,7 +55,7 @@ public class Reverse_Integer {
     }
 
     public static void main(String[] args) {
-        Reverse_Integer t = new Reverse_Integer();
+        ReverseInteger t = new ReverseInteger();
         int a = -1321;
         System.out.println(t.reverse1(a));
         System.out.println(Integer.MAX_VALUE);
