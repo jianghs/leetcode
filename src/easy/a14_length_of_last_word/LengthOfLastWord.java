@@ -6,18 +6,18 @@ package easy.a14_length_of_last_word;
  * */
 public class LengthOfLastWord {
     public int lengthOfLastWord(String s) {
-        if ("".equals(s)) {
-            return 0;
+        // 从右边出现最后一个字母的位置
+        int right = s.length() - 1;
+        while (right >= 0 && s.charAt(right) == ' ') {
+            right --;
         }
-        char[] stringchars = s.toCharArray();
-        StringBuilder sb = new StringBuilder();
-        for (int i = 0; i < stringchars.length; i++) {
-            sb.append(stringchars[i]);
-            if (stringchars[i] == ' ') {
-                sb = new StringBuilder();
-            }
+
+        int left = right;
+        while (left >= 0 && s.charAt(left) != ' ') {
+            left --;
         }
-        return sb.length();
+
+        return right - left;
     }
 
     public int lengthOfLastWord2(String s) {
@@ -30,6 +30,6 @@ public class LengthOfLastWord {
 
     public static void main(String[] args) {
         LengthOfLastWord main = new LengthOfLastWord();
-        System.out.println(main.lengthOfLastWord("Hello World"));
+        System.out.println(main.lengthOfLastWord("a cccfgg "));
     }
 }
